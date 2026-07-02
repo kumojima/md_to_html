@@ -51,6 +51,9 @@
 <div id="preview"></div>
 
   <script>
+    marked.setOptions({
+      breaks: true
+    });
     document.getElementById('copyButton').addEventListener('click', async () => {
       const markdown = document.getElementById('markdown').value;
       const html = marked.parse(markdown);
